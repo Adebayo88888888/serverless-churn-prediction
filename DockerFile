@@ -1,0 +1,11 @@
+FROM public.ecr.aws/lambda/python:3.13
+
+RUN pip install uv
+COPY pyproject.toml uv.lock ./
+
+RUN uv sync
+
+COPY model.bin .
+COPY lambda_function.py .
+
+CMD ["lambda_function.lambda_handler"]
