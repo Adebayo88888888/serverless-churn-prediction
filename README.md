@@ -38,8 +38,11 @@ The project follows a serverless-first ML deployment workflow, from training to 
 
 #### High-level flow:
 
-Data → Model Training → Model Serialization
-
+     Data
+     
+     → Model Training
+     
+     → Model Serialization
 
      → Serverless Inference Logic
      
@@ -74,4 +77,5 @@ Data → Model Training → Model Serialization
   * PaymentMethod
 
 All preprocessing steps were frozen and aligned with inference-time expectations.
+
 
