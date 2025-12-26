@@ -20,15 +20,15 @@ The objective of this project is to predict customer churn probability and deplo
 
 The dataset used is a telecommunications customer dataset containing historical customer information, including:
 
-. Demographics: Gender, Senior Citizen, Partner, Dependents
+* Demographics: Gender, Senior Citizen, Partner, Dependents
 
-. Subscription Details: Contract type, Internet service, Payment method
+* Subscription Details: Contract type, Internet service, Payment method
 
-. Usage & Billing: Monthly charges, tenure, total charges
+* Usage & Billing: Monthly charges, tenure, total charges
 
-. Target Variable: Churn (Yes / No)
+* Target Variable: Churn (Yes / No)
 
-. The dataset was cleaned and preprocessed offline in a Jupyter Notebook before model training.
+* The dataset was cleaned and preprocessed offline in a Jupyter Notebook before model training.
 
 ---
 
@@ -39,9 +39,14 @@ The project follows a serverless-first ML deployment workflow, from training to 
 #### High-level flow:
 
 Data → Model Training → Model Serialization
+
+
      → Serverless Inference Logic
+     
      → Docker-based Lambda
+     
      → API Gateway
+     
      → Real-time Predictions
 
 ---
@@ -50,22 +55,23 @@ Data → Model Training → Model Serialization
 
 ### 1️⃣ Data Preprocessing & Feature Engineering
 
-. Missing values were handled appropriately.
+* Missing values were handled appropriately.
 
-. Categorical variables were encoded.
+* Categorical variables were encoded.
 
-. Numerical features were scaled for model stability.
+* Numerical features were scaled for model stability.
 
-. Selected features included:
+* Selected features included:
 
-  . tenure
+  * tenure
   
-  . MonthlyCharges
+  * MonthlyCharges
   
-  . ContractType
+  * ContractType
   
-  . InternetService
+  * InternetService
   
-  . PaymentMethod
+  * PaymentMethod
 
 All preprocessing steps were frozen and aligned with inference-time expectations.
+
